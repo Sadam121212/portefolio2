@@ -1,0 +1,69 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px 10px;
+  font-size: 18px;
+}
+
+.navbar {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.linkNavbar {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.accueil:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  text-decoration: none;
+  color: #6e07f3;
+  margin-left: 50px;
+  cursor: pointer;
+}
+.btnContact {
+  height: 300px;
+  width: 300px;
+  border-radius: 9999px;
+  padding: 15px 40px 15px 40px;
+  border: 3px solid #6e07f3;
+}
+
+.aPropos:hover {
+  text-decoration: underline;
+}
+.logo {
+  width: 40%;
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 115px;
+  }
+
+  .header {
+    padding: 20px 20px 30px;
+    font-size: 12px;
+  }
+
+  .navbar {
+    text-transform: uppercase;
+  }
+
+  .aPropos {
+    text-decoration: none;
+    color: #ff6060;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .header {
+    font-size: 10px;
+  }
+}

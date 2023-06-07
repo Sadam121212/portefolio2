@@ -1,0 +1,34 @@
+.title {
+  font-size: 50px;
+}
+.subtitle {
+  font-weight: 400;
+  padding: 30px;
+}
+.imgDev {
+  width: 70%;
+}
+.column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.imgDevContainer {
+  display: flex;
+  justify-content: space-around;
+}
+.presentation {
+  height: 45vh;
+  padding: 6rem;
+  background-color: #6e07f3;
+  color: white;
+  text-align: center;
+}
+.titlePresentation {
+  font-size: xx-large;
+}
+.subtitlePresentation {
+  padding: 30px;
+  font-weight: 400;
+  width: 75%;
+}

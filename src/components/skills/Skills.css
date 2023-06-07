@@ -1,0 +1,43 @@
+.sectionSkills {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: -150px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1em 0rem lightgray;
+}
+.titleSkills{
+    font-size: 24px;
+    padding: 1rem;
+}
+.column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.containerSkills{
+width: 100%;
+}
+.pSkills{
+    text-align: center;
+        width: 80%;
+}
+.list-title{
+    color: #6e07f3;
+    padding: 2rem;
+}
+.is-centered{
+    display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+}
+.fa-stack {
+    border-radius: 50%;
+    background-color: #5BE9B9;
+    height: 2em;
+    width: 2.5em;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+}
