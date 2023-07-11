@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
 import Footer from "../commons/footer/Footer";
 import Navbar from "../commons/navbar/Navbar";
-import { About, HomePage } from "../pages";
+import { HomePage } from "../pages";
+import ProjectPlanner from "../pages/project-planner/ProjectPlanner";
+import MonCV from "../pages/mon-cv/MonCV";
 
 export default function Navigation() {
   return (
@@ -13,7 +15,8 @@ export default function Navigation() {
           <Navbar />
           <Routes>
             <Route exact path="/" element={<HomePage />} />
-            <Route exact path="/a-propos" element={<About />} />
+            <Route exact path="/project-planner" element={<ProjectPlanner />} />
+            <Route exact path="/mon-cv" element={<MonCV />} />
           </Routes>
           <Footer />
         </main>

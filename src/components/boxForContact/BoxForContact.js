@@ -1,9 +1,7 @@
 import React from "react";
 import "./BoxForContact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-faHandFist
-} from "@fortawesome/free-solid-svg-icons";
+import { faHandFist } from "@fortawesome/free-solid-svg-icons";
 
 export default function BoxForContact() {
   return (
@@ -19,10 +17,7 @@ export default function BoxForContact() {
           </p>
         </div>
         <div>
-          <a
-            className="buttonBoxContact"
-            href="/project-planner"
-          >
+          <a className="buttonBoxContact" href="/project-planner">
             <span className="iconBoxContact">
               <FontAwesomeIcon icon={faHandFist} />
             </span>

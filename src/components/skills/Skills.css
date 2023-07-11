@@ -1,43 +1,61 @@
+.skillsContainer {
+  padding: 50px;
+}
+
 .sectionSkills {
-  margin-left: 50px;
-  margin-right: 50px;
   margin-top: -150px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 1px 1px 1em 0rem lightgray;
+  padding: 10px 20px 50px 20px;
 }
-.titleSkills{
-    font-size: 24px;
-    padding: 1rem;
+.content {
+  width: 100%;
 }
-.column {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.ant-card-body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
-.containerSkills{
-width: 100%;
+
+.titleSkills {
+  margin-top: 15px;
 }
-.pSkills{
-    text-align: center;
-        width: 80%;
+
+.pSkills {
+  text-align: center;
+  width: 80%;
 }
-.list-title{
-    color: #6e07f3;
-    padding: 2rem;
+.list-title {
+  color: #6e07f3;
+  margin-top: 15px;
 }
-.is-centered{
-    display: flex;
-        align-items: flex-start;
-        flex-direction: row;
+.is-centered {
+  display: flex;
+  justify-content: center;
 }
 .fa-stack {
-    border-radius: 50%;
-    background-color: #5BE9B9;
-    height: 2em;
-    width: 2.5em;
-    justify-content: center;
+  border-radius: 50%;
+  background-color: #5be9b9;
+  height: 2em;
+  width: 2.5em;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+@media screen and (max-width: 1301px) {
+  .ant-row {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 4rem;
+    justify-content: center;
+  }
+  .ant-col-md-12 {
+    width: 100%;
+  }
+  .ant-card {
+    width: 70vh;
+  }
 }

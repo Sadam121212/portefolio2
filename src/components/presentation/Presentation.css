@@ -8,6 +8,9 @@
 .imgDev {
   width: 70%;
 }
+.titleSection {
+  text-align: center;
+}
 .column {
   display: flex;
   align-items: center;
@@ -18,11 +21,11 @@
   justify-content: space-around;
 }
 .presentation {
-  height: 45vh;
   padding: 6rem;
   background-color: #6e07f3;
   color: white;
   text-align: center;
+  margin-bottom: 5%;
 }
 .titlePresentation {
   font-size: xx-large;

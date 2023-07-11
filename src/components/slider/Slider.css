@@ -1,0 +1,76 @@
+.carousel-contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  font-size: 14px;
+}
+.carousel {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.carousel-image {
+  width: 200px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.carousel-text {
+  text-align: center;
+  margin-top: 25px;
+  align-self: flex-start;
+  width: 50%;
+  margin: auto;
+  padding: 30px;
+}
+
+.bullets {
+  text-align: center;
+}
+
+.bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.bullet.active {
+  background-color: black;
+}
+.slide {
+  animation: slideAnimation 0.5s ease-in-out;
+}
+.ant-carousel .slick-dots-bottom {
+  bottom: -12px;
+}
+.ant-carousel {
+  font-family: "Raleway", sans-serif !important;
+}
+
+@keyframes slideAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel-text {
+    width: 80%;
+  }
+}

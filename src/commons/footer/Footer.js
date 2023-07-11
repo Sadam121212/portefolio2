@@ -2,17 +2,15 @@ import React from "react";
 import "./Footer.css";
 import logo from "../../images/logo-fskn.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedInIn,
-  faGitHub,
-  faEnvelope,
-} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
     <div className="footerContainer">
       <div className="footerContain">
-        <img src={logo} className="logoFooter" />
+        <img src={logo} className="logoFooter" alt="logo" />
         <p className="pFooter">
           Each task accomplished with passion and perseverance brings you closer
           to your goals.
@@ -20,31 +18,32 @@ export default function Footer() {
         <div className="social-icons">
           <p className="field">
             <a
-              className="button is-medium"
-              href="https://linkedin.com/in/matthew-farley-32526014/"
+              className="iconLinkedin"
+              href="https://www.linkedin.com/in/fatima-skand-279081180/"
               target="_blank"
+              rel="noreferrer"
             >
               <span className="icon">
-                <FontAwesomeIcon icon={faLinkedInIn} />
+                <FontAwesomeIcon icon={faLinkedinIn}/>
               </span>
             </a>
             <a
-              className="button is-medium"
-              href="https://producthunt.com/@farleymatters"
+              href="https://github.com/FSKN98"
               target="_blank"
+              rel="noreferrer"
             >
               <span className="icon">
-                <FontAwesomeIcon icon={faGitHub} />
+                <FontAwesomeIcon icon={faGithub} />
               </span>
             </a>
-            <a className="button is-medium" href="mailto:mattfarley@hey.com">
+            <a className="iconMail" href="mailto:mattfarley@hey.com">
               <span className="icon">
                 <FontAwesomeIcon icon={faEnvelope} />
               </span>
             </a>
           </p>
         </div>
-        <p>© 2023 Fatima SKANDRANI, Tous droits réservés.</p>
+        <p>© 2023 Fatima SKAND, All rights reserved.</p>
       </div>
     </div>
   );
