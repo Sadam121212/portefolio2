@@ -6,7 +6,7 @@
   padding: 30px;
 }
 .imgDev {
-  width: 70%;
+  width: 55%;
 }
 .titleSection {
   text-align: center;
@@ -27,6 +27,9 @@
   text-align: center;
   margin-bottom: 5%;
 }
+.avatar {
+  width: 210px;
+}
 .titlePresentation {
   font-size: xx-large;
 }
@@ -34,4 +37,38 @@
   padding: 30px;
   font-weight: 400;
   width: 75%;
+  font-size: 22px;
+}
+@media screen and (max-width: 768px) {
+  .titlePresentation {
+    font-size: x-large;
+  }
+  .presentation {
+    padding: 2rem;
+  }
+  .subtitlePresentation {
+    padding: 3rem;
+    width: 95%;
+    font-size: 17px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .titleSection {
+    padding: 3rem 1.5rem;
+  }
+  .avatar {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .presentation {
+    padding: 3rem;
+  }
+  .titlePresentation {
+    font-size: 22px;
+  }
+    .imgDev {
+      width: 85%;
+    }
 }

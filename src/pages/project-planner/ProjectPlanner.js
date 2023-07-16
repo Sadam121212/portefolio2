@@ -12,22 +12,42 @@ import axios from "axios";
 const ProjectPlanner = () => {
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
-  const [mobile, setMobie] = useState("");
+  const [mobile, setMobile] = useState("");
   const [message, setMessage] = useState("");
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const sendMail = (e) => {
-    const body = { name, mail, mobile, message };
-
-    console.log(body);
-
-    axios({
-      method: "post",
-      url: "http://127.0.0.1:3001/mail",
-      data: body,
-    });
-
     e.preventDefault();
+
+    // Vérifier si tous les champs sont remplis
+    if (name && mail && mobile && message) {
+      const body = { name, mail, mobile, message };
+      console.log(body);
+
+      axios({
+        method: "post",
+        url: "http://127.0.0.1:3001/mail",
+        data: body,
+      });
+
+      setName("");
+      setMail("");
+      setMobile("");
+      setMessage("");
+
+      setIsModalVisible(true); // Afficher la modale lorsque les champs sont correctement remplis
+    } else {
+      // Afficher un message d'erreur si tous les champs ne sont pas remplis
+      alert(
+        "Veuillez remplir tous les champs avant de soumettre le formulaire."
+      );
+    }
   };
+
+  const closeModal = () => {
+    setIsModalVisible(false); // Fermer la modale
+  };
+
   return (
     <div>
       <form>
@@ -71,7 +91,7 @@ const ProjectPlanner = () => {
                   type="text"
                   autoComplete="off"
                   value={mobile}
-                  onChange={(e) => setMobie(e.target.value)}
+                  onChange={(e) => setMobile(e.target.value)}
                 />
                 <FontAwesomeIcon icon={faMobile} className="iconContact" />
               </div>
@@ -82,8 +102,7 @@ const ProjectPlanner = () => {
             <div className="groupe">
               <label>Message</label>
               <textarea
-                placeholder="Enter here
-..."
+                placeholder="Enter here..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
@@ -94,6 +113,18 @@ const ProjectPlanner = () => {
         <div className="pied-formulaire" align="center">
           <button onClick={(e) => sendMail(e)}>Submit</button>
         </div>
+
+        {/* Modale */}
+        {isModalVisible && (
+          <div className="modal">
+            <div className="modal-content">
+              <h2>Great! Your form is sent !</h2>
+              <p>I got your message.</p>
+              <p>I will contact you soon. 😃</p>
+              <button onClick={closeModal}>Close</button>
+            </div>
+          </div>
+        )}
       </form>
     </div>
   );

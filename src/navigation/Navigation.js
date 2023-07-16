@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+//import { useLocation } from "react-router-dom";
 import React from "react";
 import Footer from "../commons/footer/Footer";
 import Navbar from "../commons/navbar/Navbar";
@@ -8,6 +8,9 @@ import ProjectPlanner from "../pages/project-planner/ProjectPlanner";
 import MonCV from "../pages/mon-cv/MonCV";
 
 export default function Navigation() {
+  /*const { pathname } = useLocation();
+  console.log(pathname);*/
+
   return (
     <Router>
       <div className="navigation_main_container">

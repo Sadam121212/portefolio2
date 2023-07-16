@@ -1,7 +1,7 @@
 import React from "react";
 import "./Presentation.css";
-//import avatar from "../../images/avataaars.svg";
-//import imgDev from "../../images/imgDev.jpg";
+import avatar from "../../images/avataaars.svg";
+import imgDev from "../../images/imgDev.jpg";
 import { Fade, Slide } from "react-awesome-reveal";
 
 const Presentation = () => (
@@ -21,10 +21,10 @@ const Presentation = () => (
           I design and code beautifully simple things, and I love what I do.
         </Fade>
       </div>
-      {/*<img className="avatar" src={avatar} alt="Avatar" />
+      <img className="avatar" src={avatar} alt="Avatar" />
     </div>
     <div className="imgDevContainer">
-      <img className="imgDev" src={imgDev} alt="Hero Devices" />*/}
+      <img className="imgDev" src={imgDev} alt="Hero Devices" />
 </div>
     <div className="presentation">
       <div className="column">

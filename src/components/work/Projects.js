@@ -121,10 +121,10 @@ export default function Projects() {
     <div id="mes-projets" className="projects-container">
       <h1>My projects</h1>
       <section id="filters">
-        <div id="all">Tous</div>
-        <div id="CSS">HTML5 & CSS</div>
-        <div id="JS">JavaScript</div>
+        <div id="all">All</div>
         <div id="React">React</div>
+        <div id="JS">JavaScript</div>
+        <div id="CSS">HTML5 & CSS</div>
         <div id="SEO">SEO</div>
       </section>
       <div id="gallery">

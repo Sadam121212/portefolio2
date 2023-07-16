@@ -14,8 +14,7 @@ img {
   padding: 0;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+font-family: "Raleway", sans-serif;
 }
 .ant-carousel .slick-dots li button {
   background: #6e07f2;
@@ -33,4 +32,7 @@ code {
   height: 15px;
   border-radius: 20px;
   margin-inline: 2px !important;
+}
+.subtitle{
+  white-space: pre-wrap !important;
 }

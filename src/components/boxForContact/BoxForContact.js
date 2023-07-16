@@ -8,7 +8,7 @@ export default function BoxForContact() {
     <div className="boxContact">
       <div className="columns">
         <div className="column level-item">
-          <h1 className="titleBoxContact">Start a project</h1>
+          <h2 className="titleBoxContact">Start a project</h2>
         </div>
         <div>
           <p className="containBoxContact">
@@ -16,7 +16,7 @@ export default function BoxForContact() {
             I’ll buy the coffee.
           </p>
         </div>
-        <div>
+        <div className="buttonBoxTop">
           <a className="buttonBoxContact" href="/project-planner">
             <span className="iconBoxContact">
               <FontAwesomeIcon icon={faHandFist} />

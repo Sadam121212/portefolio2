@@ -34,9 +34,31 @@
   padding: 15px 40px 15px 40px;
   border: 3px solid #5be9b9;
 }
-.buttonBoxContact:hover{
-background-color: #5be9b9;
+.buttonBoxContact:hover {
+  background-color: #5be9b9;
 }
 .iconBoxContact {
   margin-right: 1rem;
+}
+@media screen and (max-width: 1241px) {
+  .boxContact {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .columns {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .titleBoxContact {
+    font-size: 30px;
+    margin-bottom: 2rem;
+  }
+  .containBoxContact {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .buttonBoxTop {
+    margin-top: 1rem;
+  }
 }

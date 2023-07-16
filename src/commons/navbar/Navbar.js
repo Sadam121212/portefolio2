@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../images/logo-fskn.jpg";
 import "./Navbar.css";
 import Pdf from "../../pages/mon-cv/mon-cv.pdf";
@@ -14,57 +14,69 @@ const scrollToSection = () => {
 };
 
 const Navbar = () => {
-  const menuHamburgerRef = useRef(null);
-  const navbarRef = useRef(null);
+  const { pathname } = useLocation();
+  /*const menuHamburgerRef = useRef(null);
+  const navbarRef = useRef(null);*/
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleMenuClick = () => {
-      navbarRef.current.classList.toggle("mobileMenu");
-      setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
+  /*useEffect(() => {
+    if (pathname !== "/project-planner") {
+      const handleMenuClick = () => {
+        navbarRef.current.classList.toggle("mobileMenu");
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+      };
 
-    menuHamburgerRef.current.addEventListener("click", handleMenuClick);
+      menuHamburgerRef.current.addEventListener("click", handleMenuClick);
 
-    return () => {
-      menuHamburgerRef.current.removeEventListener("click", handleMenuClick);
-    };
-  }, [isMobileMenuOpen]);
+      return () => {
+        menuHamburgerRef.current.removeEventListener("click", handleMenuClick);
+      };
+    }
+  }, [isMobileMenuOpen,pathname]);*/
+  const toogleHamburgerMenu = () =>
+  {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    
+}
 
   return (
-    <nav className={`header ${isMobileMenuOpen ? "mobileMenuOpen" : ""}`}>
+    <nav className={`header ${isMobileMenuOpen ? "mobileMenuOpen " : ""}`}>
       <div>
         <a href="/">
           <img src={logo} className="logo" alt="logo" />
         </a>
       </div>
-      <div className="navbar" ref={navbarRef}>
-        <ul className="navLinks">
-          <NavLink
-            to="/#mes-projets"
-            className="linkNavbar"
-            onClick={scrollToSection}
-          >
-            Mes projets
-          </NavLink>
-          <a
-            href={Pdf}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="linkNavbar"
-          >
-            Mon CV
-          </a>
-          <Link to="/project-planner" className="contact btnContact">
-           Say hello
-          </Link>
-        </ul>
-      </div>
-      <FontAwesomeIcon
-        icon={faBars}
-        className="menuHamburger"
-        ref={menuHamburgerRef}
-      />
+      {pathname !== "/project-planner" && (
+        <div className="navbar" >
+          <ul className="navLinks">
+            <NavLink
+              to="/#mes-projets"
+              className="linkNavbar"
+              onClick={scrollToSection}
+            >
+              My projects
+            </NavLink>
+            <a
+              href={Pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="linkNavbar"
+            >
+              CV
+            </a>
+            <Link to="/project-planner" className="contact btnContact">
+              Say hello
+            </Link>
+          </ul>
+        </div>
+      )}
+      {pathname !== "/project-planner" && (
+        <FontAwesomeIcon
+          icon={faBars}
+          className="menuHamburger"
+       onClick={toogleHamburgerMenu}
+        />
+      )}
     </nav>
   );
 };
