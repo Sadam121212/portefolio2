@@ -14,7 +14,7 @@ export default function Projects() {
   const projects = [
     {
       _id: 0,
-      name: "Projet HTML5 & CSS",
+      name: "Project HTML5 & CSS",
       category: "CSS",
       src: ohMyFood,
       description:
@@ -23,7 +23,7 @@ export default function Projects() {
     },
     {
       _id: 1,
-      name: "Projet HTML5 & CSS",
+      name: "Project HTML5 & CSS",
       category: "CSS",
       src: booki,
       description:
@@ -33,7 +33,7 @@ export default function Projects() {
 
     {
       _id: 2,
-      name: "Projet JavaScript",
+      name: "Project JavaScript",
       category: "JS",
       src: sophieBluel,
       description:
@@ -43,7 +43,7 @@ export default function Projects() {
 
     {
       _id: 3,
-      name: "Projet JavaScript",
+      name: "Project JavaScript",
       category: "JS",
       src: printIt,
       description: "Add a carousel to the Print-It site.",
@@ -51,7 +51,7 @@ export default function Projects() {
     },
     {
       _id: 4,
-      name: "Projet React",
+      name: "Project React",
       category: "React",
       src: kasa,
       description: "Development of a real estate rental React application.",
@@ -59,7 +59,7 @@ export default function Projects() {
     },
     {
       _id: 5,
-      name: "Projet React",
+      name: "Project React",
       category: "React",
       src: events,
       description: "Debug the website of an event agency.",
@@ -67,7 +67,7 @@ export default function Projects() {
     },
     {
       _id: 6,
-      name: "Projet React",
+      name: "Project React",
       category: "React",
       src: argentBank,
       description:
@@ -76,7 +76,7 @@ export default function Projects() {
     },
     {
       _id: 7,
-      name: "Projet SEO",
+      name: "Project SEO",
       category: "SEO",
       src: ninaCarducci,
       description: "Bug search and SEO optimization.",

@@ -2,6 +2,7 @@ import React from "react";
 import "./BoxForContact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandFist } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export default function BoxForContact() {
   return (
@@ -17,12 +18,12 @@ export default function BoxForContact() {
           </p>
         </div>
         <div className="buttonBoxTop">
-          <a className="buttonBoxContact" href="/project-planner">
+          <Link to="/project-planner" className="buttonBoxContact">
             <span className="iconBoxContact">
               <FontAwesomeIcon icon={faHandFist} />
             </span>
             <span>Let's do this</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
