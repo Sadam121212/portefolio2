@@ -6,6 +6,7 @@ import Navbar from "../commons/navbar/Navbar";
 import { HomePage } from "../pages";
 import ProjectPlanner from "../pages/project-planner/ProjectPlanner";
 import MonCV from "../pages/mon-cv/MonCV";
+import NavbarTest from "../commons/navbar/NavbarTest";
 
 export default function Navigation() {
   /*const { pathname } = useLocation();
@@ -15,7 +16,7 @@ export default function Navigation() {
     <Router>
       <div className="navigation_main_container">
         <main className="navigation_container">
-          <Navbar />
+          <NavbarTest />
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/project-planner" element={<ProjectPlanner />} />

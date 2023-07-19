@@ -19,7 +19,6 @@
   background: none;
   border: none;
   padding: 2rem;
-  font-family: "Raleway", sans-serif !important;
 }
 .linkNavbar:hover {
   color: #6e07f3;
@@ -45,47 +44,44 @@
   color: white;
 }
 .logo {
-  width: 30%;
+  width: 40%;
 }
 .menuHamburger {
-  display: none;
   position: absolute;
   right: 50px;
   font-size: 25px;
   cursor: pointer;
+  top: 10px;
+  z-index: 2;
+}
+.menuTest {
+  display: block;
+}
+.menuTestMobile {
+  display: none;
+}
+.test {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px 10px;
+  font-size: 18px;
+}
+.test2 {
+  width: 32%;
+  font-size: 18px;
+}
+
+.ant-menu-horizontal {
+  line-height: 46px;
+  border: none;
+}
+.ant-menu-item {
+  color: inherit;
+  border-bottom: none;
 }
 
 @media screen and (max-width: 1133px) {
-  .header.mobileMenuOpen {
-    margin-bottom: 40px;
-    overflow: hidden;
-  }
-  .menuHamburger {
-    display: block;
-    z-index: 2;
-  }
-  .navLinks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .navbar {
-    background-color: rgba(233, 210, 258, 0.4);
-    left: 0;
-    position: absolute;
-    width: 100%;
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -100%;
-    transition: all 0.5s ease;
-    z-index: 1;
-  }
-  .mobileMenu {
-    margin-top: 0;
-  }
   .btnContact {
     height: 0;
     width: 0;
@@ -102,7 +98,36 @@
     padding: 1rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1083px) {
+  .menuTest {
+    display: none;
+  }
+  .menuTestMobile {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px 0px;
+    font-size: 18px;
+  }
+  .menuHamburger {
+    top: auto;
+  }
+  .ant-menu-light > .ant-menu.ant-menu-root.ant-menu-vertical {
+    width: 110%;
+    margin-right: 50px;
+  }
+  .menuTestHidden {
+    display: none;
+  }
+
+  .logoHidden {
+    display: none;
+  }
+  .menuMobileContent {
+    display: flex;
+    align-items: center;
+  }
   .linkNavbar {
     font-size: 15px;
     padding: 1rem;

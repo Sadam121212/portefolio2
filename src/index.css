@@ -14,7 +14,7 @@ img {
   padding: 0;
 }
 code {
-font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 .ant-carousel .slick-dots li button {
   background: #6e07f2;
@@ -33,6 +33,45 @@ font-family: "Raleway", sans-serif;
   border-radius: 20px;
   margin-inline: 2px !important;
 }
-.subtitle{
+.subtitle {
   white-space: pre-wrap !important;
+}
+
+/* NAVBAR */
+
+.ant-menu.ant-menu-root.ant-menu-vertical {
+  border: none;
+}
+:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
+  .ant-menu-item-selected,
+:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
+  > .ant-menu
+  .ant-menu-item-selected {
+  background-color: white;
+}
+:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
+  .ant-menu-item-selected,
+:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
+  > .ant-menu
+  .ant-menu-item-selected {
+  color: #6e07f2;
+}
+:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
+  .ant-menu-item-selected,
+:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
+  > .ant-menu
+  .ant-menu-item-selected {
+  color: #6e07f2 !important;
+}
+:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light.ant-menu-horizontal
+  > .ant-menu-item-selected::after,
+:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
+  > .ant-menu.ant-menu-horizontal
+  > .ant-menu-item-selected::after,
+:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light.ant-menu-horizontal
+  > .ant-menu-submenu-selected::after,
+:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
+  > .ant-menu.ant-menu-horizontal
+  > .ant-menu-submenu-selected::after {
+  display: none;
 }

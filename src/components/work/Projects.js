@@ -107,6 +107,7 @@ export default function Projects() {
       );
       setFilteredProjects(filtered);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCategory]);
 
   const onHoverProject = (index) => {
@@ -141,7 +142,7 @@ export default function Projects() {
             {activeProject === project._id && (
               <Fade duration={700}>
                 <div className="overlay-content">
-                  <h2>{project.name}</h2>
+                  <h2 className="imgTilte">{project.name}</h2>
                   <p className="imgDescription">{project.description}</p>
                   <a
                     href={project.link}

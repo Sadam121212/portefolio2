@@ -165,6 +165,13 @@ form .pied-formulaire button:hover {
     width: 20%;
   }
 }
+@media screen and (max-width: 469px) {
+  form .corps-formulaire .droite {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 190px;
+  }
+}
 @media screen and (max-width: 426px) {
   .avatarContain {
     margin-top: 15%;

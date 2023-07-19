@@ -108,14 +108,21 @@
   .gallery-item img {
     height: 180px;
     object-fit: cover;
+    font-size: 12px;
   }
   #filters {
     flex-wrap: wrap;
     padding: 2rem;
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 426px) {
   .gallery-item img {
     object-fit: unset;
+  }
+  .imgDescription {
+    font-size: 14px !important;
+  }
+  .imgTilte {
+    font-size: 20px !important;
   }
 }
