@@ -41,6 +41,7 @@ code {
 
 .ant-menu.ant-menu-root.ant-menu-vertical {
   border: none;
+  font-size: 18px;
 }
 :where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
   .ant-menu-item-selected,
