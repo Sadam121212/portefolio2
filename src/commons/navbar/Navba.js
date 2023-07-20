@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu } from "antd";
-import { NavLink, Redirect } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../images/logo-fskn.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

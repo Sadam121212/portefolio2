@@ -107,7 +107,7 @@ export default function Projects() {
       );
       setFilteredProjects(filtered);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCategory]);
 
   const onHoverProject = (index) => {

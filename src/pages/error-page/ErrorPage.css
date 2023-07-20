@@ -1,0 +1,44 @@
+.errorContainer {
+  text-align: center;
+}
+.numberError {
+  font-weight: bold;
+  font-size: 230px;
+  margin-bottom: 0.5rem;
+  color: #6e07f2;
+}
+h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.linkErrorContain {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.linkError {
+  color: #6e07f2;
+}
+
+.textError {
+  display: none;
+}
+
+@media screen and (max-width: 426px) {
+  .errorContainer {
+    margin-top: 70px;
+  }
+  .numberError {
+    font-size: 140px !important;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  .textError {
+    display: block;
+  }
+
+  .numberError {
+    font-size: 180px;
+  }
+}

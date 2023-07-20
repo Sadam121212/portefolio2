@@ -8,7 +8,7 @@ export default function BoxForContact() {
   return (
     <div className="boxContact">
       <div className="columns">
-        <div className="column level-item">
+        <div>
           <h2 className="titleBoxContact">Start a project</h2>
         </div>
         <div>

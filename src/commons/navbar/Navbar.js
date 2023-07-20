@@ -1,90 +1,117 @@
 import React, { useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import logo from "../../images/logo-fskn.jpg";
+import { Menu } from "antd";
+import { NavLink} from "react-router-dom";
 import "./Navbar.css";
-import Pdf from "../../pages/mon-cv/mon-cv.pdf";
+import logo from "../../images/logo-fskn.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { useRef } from "react";
-import { useEffect } from "react";
 
-const scrollToSection = () => {
-  const section = document.getElementById("mes-projets");
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-};
+const items = [
+  {
+    label: "My projects",
+    key: "project",
+    to: "/#mes-projets",
+  },
+  {
+    label: "My CV",
+    key: "cv",
+    to: "/cv.pdf",
+  },
+  {
+    label: "Say Hello",
+    key: "contact",
+    to: "/project-planner",
+  },
+];
 
-const Navbar = () => {
-  const { pathname } = useLocation();
-  const menuHamburgerRef = useRef(null);
+const NavbarTest = () => {
+  const [current, setCurrent] = useState("project");
+  const [mobileIsOpen, setMobileIsOpen] = useState(false);
 
-  const navbarRef = useRef(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const onClick = (e) => {
+    console.log("click ", e);
+    setCurrent(e.key);
+  };
 
-  useEffect(() => {
-    if (pathname !== "/project-planner") {
-      const handleMenuClick = () => {
-        navbarRef.current.classList.toggle("mobileMenu");
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-      };
-
-      menuHamburgerRef.current.addEventListener("click", handleMenuClick);
-
-      return () => {
-        menuHamburgerRef.current.removeEventListener("click", handleMenuClick);
-      };
+  const scrollToSection = () => {
+    const section = document.querySelector("#mes-projets");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
-  }, [isMobileMenuOpen, pathname]);
-  const handleMenuClick = () => {};
-
+  };
   return (
-    <nav
-      
-      className={`header mobileMenuOpen ${
-        isMobileMenuOpen ? "isMobileMenuOpen" : ""
-      }`}
-    >
-      <div>
-        <a href="/">
-          <img src={logo} className="logo" alt="logo" />
-        </a>
-      </div>
-      {pathname !== "/project-planner" && (
-        <div className="navbar">
-          <ul className="navLinks">
-            <NavLink
-              to="/#mes-projets"
-              className="linkNavbar"
-              onClick={scrollToSection}
-            >
-              My projects
+    <div>
+      <div className={`menuTest ${mobileIsOpen ? "menuTestHidden" : ""}`}>
+        <div className="test">
+          <div>
+            <NavLink to="/">
+              <img
+                src={logo}
+                className={`logo ${mobileIsOpen ? "logoHidden" : ""}`}
+                alt="logo"
+              />
             </NavLink>
-            <a
-              href={Pdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="linkNavbar"
-            >
-              CV
-            </a>
-            <Link to="/project-planner" className="contact btnContact">
-              Say hello
-            </Link>
-          </ul>
+          </div>
+          <Menu
+            className="test2"
+            onClick={onClick}
+            selectedKeys={[current]}
+            mode="horizontal"
+          >
+            {items.map((item) => (
+              <Menu.Item key={item.key}>
+                <NavLink
+                  to={item.to}
+                  className="linkNavbar"
+                  onClick={item.key === "project" ? scrollToSection : null}
+                >
+                  {item.label}
+                </NavLink>
+              </Menu.Item>
+            ))}
+          </Menu>
         </div>
-      )}
-      {pathname !== "/project-planner" && (
+      </div>
+      <div className="menuTestMobile">
+        <div className="menuMobileContent">
+          <div>
+            <NavLink to="/">
+              <img
+                src={logo}
+                className={`logo ${mobileIsOpen ? "logoHidden" : ""}`}
+                alt="logo"
+              />
+            </NavLink>
+          </div>
+          <FontAwesomeIcon
+            icon={faBars}
+            className="menuHamburger"
+            onClick={() => setMobileIsOpen(!mobileIsOpen)}
+          />
 
-        <FontAwesomeIcon
-          ref={menuHamburgerRef}
-          icon={faBars}
-          className="menuHamburger"
-          onClick={handleMenuClick}
-        />
-      )}
-    </nav>
+          {mobileIsOpen && (
+            <Menu onClick={onClick} selectedKeys={[current]} mode="vertical">
+              {items.map((item) => (
+                <Menu.Item key={item.key}>
+                  <NavLink
+                    to={item.to}
+                    onClick={() => {
+                      setMobileIsOpen(false);
+                      if (item.key === "project") {
+                        scrollToSection();
+                      }
+                    }}
+                  >
+                    {item.label}
+                  </NavLink>
+                </Menu.Item>
+              ))}
+            </Menu>
+          )}
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default Navbar;
+export default NavbarTest;
