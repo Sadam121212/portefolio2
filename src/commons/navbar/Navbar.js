@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu } from "antd";
-import { NavLink} from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../images/logo-fskn.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,16 +10,15 @@ const items = [
   {
     label: "My projects",
     key: "project",
-    to: "/#mes-projets",
+    to: "#mes-projets",
   },
   {
     label: "My CV",
     key: "cv",
-    to: "/cv.pdf",
   },
   {
     label: "Say Hello",
-    key: "contact",
+    key: "project-planner",
     to: "/project-planner",
   },
 ];
@@ -28,9 +27,24 @@ const NavbarTest = () => {
   const [current, setCurrent] = useState("project");
   const [mobileIsOpen, setMobileIsOpen] = useState(false);
 
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    console.log(pathname);
+    if (pathname === "#mes-projets" || pathname === "/") {
+      setCurrent("project");
+    } else {
+      setCurrent(pathname.replace("/", ""));
+    }
+  }, [pathname]);
+
   const onClick = (e) => {
     console.log("click ", e);
-    setCurrent(e.key);
+    if (e.key === "cv") {
+      window.open("/cv.pdf", "_blank", "rel=noopener noreferrer");
+    } else {
+      setCurrent(e.key);
+    }
   };
 
   const scrollToSection = () => {

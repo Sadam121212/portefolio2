@@ -1,0 +1,36 @@
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+build_production: 
+  stage: build
+  tags:
+    - build
+  script:
+    - echo "Building production deploy package"
+    - npm install
+    - npm run build
+    - echo "Build production successful"
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - build
+  only:
+    - master
+
+deploy_production:
+  stage: deploy
+  tags:
+    - deploy
+  script:
+    - echo "Deploying production to server"
+    - cp -rv build/* /home/fskn/front
+    - echo "Deployed production"
+  environment:
+    name: production
+  only:
+    - master
