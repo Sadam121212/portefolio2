@@ -22,20 +22,23 @@ const ProjectPlanner = () => {
     // Vérifier si tous les champs sont remplis
     if (name && mail && mobile && message) {
       const body = { name, mail, mobile, message };
-      console.log(body);
 
       axios({
         method: "post",
         url: `${process.env.REACT_APP_API_URL}/mail`,
         data: body,
-      });
+      })
+        .then(() => {
+          setName("");
+          setMail("");
+          setMobile("");
+          setMessage("");
 
-      setName("");
-      setMail("");
-      setMobile("");
-      setMessage("");
-
-      setIsModalVisible(true); // Afficher la modale lorsque les champs sont correctement remplis
+          setIsModalVisible(true); // Afficher la modale lorsque les champs sont correctement remplis
+        })
+        .catch(() => {
+          alert("Une erreur s'est produite lors de l'envoi du mail");
+        });
     } else {
       // Afficher un message d'erreur si tous les champs ne sont pas remplis
       alert(

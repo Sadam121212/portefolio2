@@ -30,7 +30,6 @@ const NavbarTest = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    console.log(pathname);
     if (pathname === "#mes-projets" || pathname === "/") {
       setCurrent("project");
     } else {
@@ -39,7 +38,6 @@ const NavbarTest = () => {
   }, [pathname]);
 
   const onClick = (e) => {
-    console.log("click ", e);
     if (e.key === "cv") {
       window.open("/cv.pdf", "_blank", "rel=noopener noreferrer");
     } else {
